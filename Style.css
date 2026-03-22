@@ -254,3 +254,25 @@ footer {
     50% { transform: scale(1.2) translate(20px, -10px); opacity: 0.35; }
     100% { transform: scale(0.8) translate(0, 0); opacity: 0.2; }
 }
+{
+  "name": "SUUTRUU",
+  "short_name": "SUUTRUU",
+  "description": "Application musicale SUUTRUU avec liens vers Audiomack, YouTube, Instagram et Facebook.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ff0000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/Suutruu.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/Suutruu.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
