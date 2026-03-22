@@ -1,0 +1,77 @@
+
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Liens musicaux de Suutruu">
+    <meta name="author" content="Nayad Ben Moustoifa">
+    <meta name="website-owner-id" content="NDBMKEUS">
+    <title>Suutruu | Music Links</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <div class="background-animation"></div>
+
+    <main class="card">
+        <div class="profile-section">
+            <div class="image-wrapper" id="toggleFolder">
+                <img src="images/std.png" alt="Mes Plateformes" class="profile-pic">
+                <div class="pulse-ring"></div>
+            </div>
+            <h1><img src="images/HAT.png" alt="logo" class="logo"></h1>
+            <p>Artiste / Musicien</p>
+        </div>
+
+        <!-- Conteneur des liens -->
+        <div class="links" id="linksContainer">
+            <a href="https://audiomack.com/suutruu66" target="_blank" class="link-item">
+                <div class="icon-box"><img src="images/audiomack.jfif" alt="Audiomack"></div>
+                <span>Audiomack</span>
+            </a>
+
+            <a href="https://www.youtube.com/channel/UCjJFGzAu8vWFh2zOTwJZEIw" target="_blank" class="link-item">
+                <div class="icon-box"><img src="images/yiusuu.webp" alt="YouTube"></div>
+                <span>YouTube</span>
+            </a>
+
+            <a href="https://www.instagram.com/suuu_truuu?igsh=MW02ZXlland3aXljMg%3D%3D&utm_source=qr" target="_blank" class="link-item">
+                <div class="icon-box"><img src="images/instasuu.jfif" alt="Instagram"></div>
+                <span>SUUTRUU</span>
+            </a>
+
+            <a href="https://www.instagram.com/nde_damu?igsh=YXlucW5jejQzc3g0" target="_blank" class="link-item">
+                <div class="icon-box"><img src="images/instasuu.jfif" alt="Instagram"></div>
+                <span>Ndé Damu</span>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61553858924334&mibextid=wwXIfr&mibextid=wwXIfr" target="_blank" class="link-item">
+                <div class="icon-box"><img src="images/facesuu.webp" alt="Facebook"></div>
+                <span>Facebook</span>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Site créé par <strong>Nayad Ben Moustoifa</strong> &copy; 2026</p>
+    </footer>
+
+    <!-- Script pour le bouton -->
+    <script>
+        const toggleBtn = document.getElementById("toggleFolder");
+        const linksContainer = document.getElementById("linksContainer");
+
+        toggleBtn.addEventListener("click", () => {
+            linksContainer.classList.toggle("hidden");
+            toggleBtn.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
