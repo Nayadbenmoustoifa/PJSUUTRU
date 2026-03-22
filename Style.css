@@ -232,7 +232,7 @@ footer {
     position: absolute;
     width: 300px;       /* taille de l'image */
     height: 300px;
-    background-image: url('images/Suutruu.jpeg'); /* <-- mets ici ton image */
+    background-image: url('Suutruu.jpeg'); /* <-- mets ici ton image */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
