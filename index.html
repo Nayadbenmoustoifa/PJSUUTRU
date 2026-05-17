@@ -1,70 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Liens musicaux de Suutruu">
-    <meta name="author" content="Nayad Ben Moustoifa">
-    <meta name="website-owner-id" content="NDBMKEUS">
-    <title>Suutruu | Music Links</title>
-    
-    <!-- Google Fonts -->
-    <link rel="manifest" href="/manifest.json">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="Style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Liens musicaux de Suutruu">
+  <meta name="author" content="Nayad Ben Moustoifa">
+  <meta name="website-owner-id" content="NDBMKEUS">
+  <title>Suutruu | Music Links</title>
+
+  <!-- Google Fonts -->
+  <link rel="manifest" href="/manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="Style.css">
 </head>
 <body>
 
-    <div class="background-animation"></div>
+  <div class="background-animation"></div>
 
-    <main class="card">
-        <div class="profile-section">
-            <div class="image-wrapper">
-                <img src="pus.png" alt="Mes Plateformes" class="profile-pic">
-                <div class="pulse-ring"></div>
-            </div>
-            <h1><img src="Suutruu.jpeg" alt="logo" class="logo"></h1>
-            <p>Artiste / Musicien</p>
-        </div>
+  <main class="card">
+    <div class="profile-section">
+      <!-- Bloc principal qui agit comme bouton -->
+      <div class="image-wrapper" onclick="toggleFolders()">
+        <img src="pus.png" alt="Mes Plateformes" class="profile-pic">
+        <div class="pulse-ring"></div>
+      </div>
+      <h1><img src="Suutruu.jpeg" alt="logo" class="logo"></h1>
+      <p>Artiste / Musicien</p>
+    </div>
 
-        <!-- Dossier SUUTRUU -->
-        <div class="dossier" onclick="toggleLinks('suutruuLinks')">
-            <h2>Dossier SUUTRUU</h2>
-            <p>Clique pour voir ses liens</p>
-        </div>
-        <div id="suutruuLinks" class="links hidden">
-            <a href="https://audiomack.com/suutruu66" target="_blank" class="link-item">Audiomack</a>
-            <a href="https://www.youtube.com/channel/UCjJFGzAu8vWFh2zOTwJZEIw" target="_blank" class="link-item">YouTube</a>
-            <a href="https://www.instagram.com/suuu_truuu" target="_blank" class="link-item">Instagram</a>
-            <a href="https://www.tiktok.com/@suutruu" target="_blank" class="link-item">TikTok</a>
-        </div>
+    <!-- Conteneur des dossiers -->
+    <div id="foldersContainer" class="hidden">
+      <!-- Dossier SUUTRUU -->
+      <div class="dossier" onclick="toggleLinks('suutruuLinks')">
+        <h2>Dossier SUUTRUU</h2>
+        <p>Clique pour voir ses liens</p>
+      </div>
+      <div id="suutruuLinks" class="links hidden">
+        <a href="https://audiomack.com/suutruu66" target="_blank" class="link-item">Audiomack</a>
+        <a href="https://www.youtube.com/channel/UCjJFGzAu8vWFh2zOTwJZEIw" target="_blank" class="link-item">YouTube</a>
+        <a href="https://www.instagram.com/suuu_truuu" target="_blank" class="link-item">Instagram</a>
+        <a href="https://www.tiktok.com/@suutruu" target="_blank" class="link-item">TikTok</a>
+      </div>
 
-        <!-- Dossier Ndé Damu -->
-        <div class="dossier" onclick="toggleLinks('ndeLinks')">
-            <h2>Dossier Ndé Damu</h2>
-            <p>Clique pour voir ses liens</p>
-        </div>
-        <div id="ndeLinks" class="links hidden">
-            <a href="https://www.instagram.com/nde_damu" target="_blank" class="link-item">Instagram</a>
-            <a href="https://www.facebook.com/profile.php?id=61553858924334" target="_blank" class="link-item">Facebook</a>
-            <a href="https://www.tiktok.com/@ndb_mks269" target="_blank" class="link-item">TikTok</a>
-        </div>
-    </main>
+      <!-- Dossier Ndé Damu -->
+      <div class="dossier" onclick="toggleLinks('ndeLinks')">
+        <h2>Dossier Ndé Damu</h2>
+        <p>Clique pour voir ses liens</p>
+      </div>
+      <div id="ndeLinks" class="links hidden">
+        <a href="https://www.instagram.com/nde_damu" target="_blank" class="link-item">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61553858924334" target="_blank" class="link-item">Facebook</a>
+        <a href="https://www.tiktok.com/@ndb_mks269" target="_blank" class="link-item">TikTok</a>
+      </div>
+    </div>
+  </main>
 
-    <footer>
-        <p>Site créé par <strong>Nayad Ben Moustoifa</strong> &copy; 2026</p>
-    </footer>
+  <footer>
+    <p>Site créé par <strong>Nayad Ben Moustoifa</strong> &copy; 2026</p>
+  </footer>
 
-    <!-- Script -->
-    <script>
-        function toggleLinks(id) {
-            const block = document.getElementById(id);
-            block.classList.toggle("hidden");
-        }
-    </script>
+  <!-- Script -->
+  <script>
+    function toggleFolders() {
+      const folders = document.getElementById("foldersContainer");
+      folders.classList.toggle("hidden");
+    }
+
+    function toggleLinks(id) {
+      const block = document.getElementById(id);
+      block.classList.toggle("hidden");
+    }
+  </script>
 </body>
 </html>
 
