@@ -22,12 +22,10 @@
 
   <main class="card">
     <div class="profile-section">
-      <!-- Bloc principal qui agit comme bouton -->
-      <div class="image-wrapper" onclick="toggleFolders()">
-        <img src="pus.png" alt="Mes Plateformes" class="profile-pic">
-        <div class="pulse-ring"></div>
-      </div>
-      <h1><img src="Suutruu.jpeg" alt="logo" class="logo"></h1>
+      <!-- Logo qui agit comme bouton -->
+      <h1 onclick="toggleFolders()">
+        <img src="Suutruu.jpeg" alt="logo" class="logo clickable-logo">
+      </h1>
       <p>Artiste / Musicien</p>
     </div>
 
@@ -35,23 +33,36 @@
     <div id="foldersContainer" class="hidden">
       <!-- Dossier SUUTRUU -->
       <div class="dossier" onclick="toggleLinks('suutruuLinks')">
-        <h2>SUUTRUU</h2>
+        <h2>Dossier SUUTRUU</h2>
+        <p>Clique pour voir ses liens</p>
       </div>
       <div id="suutruuLinks" class="links hidden">
         <a href="https://audiomack.com/suutruu66" target="_blank" class="link-item">Audiomack</a>
-        <a href="https://www.youtube.com/channel/UCjJFGzAu8vWFh2zOTwJZEIw" target="_blank" class="link-item">YouTube</a>
-        <a href="https://www.instagram.com/suuu_truuu" target="_blank" class="link-item">Instagram</a>
-        <a href="https://www.tiktok.com/@suutruu" target="_blank" class="link-item">TikTok</a>
+        <a href="https://youtube.com/@suutruu" target="_blank" class="link-item">YouTube</a>
+        <a href="https://instagram.com/suuu_truuu" target="_blank" class="link-item">Instagram</a>
+        <a href="https://tiktok.com/@suutruu" target="_blank" class="link-item">TikTok</a>
       </div>
 
       <!-- Dossier Ndé Damu -->
       <div class="dossier" onclick="toggleLinks('ndeLinks')">
         <h2>Dossier Ndé Damu</h2>
+        <p>Clique pour voir ses liens</p>
       </div>
       <div id="ndeLinks" class="links hidden">
-        <a href="https://www.instagram.com/nde_damu" target="_blank" class="link-item">Instagram</a>
-        <a href="https://www.facebook.com/profile.php?id=61553858924334" target="_blank" class="link-item">Facebook</a>
-        <a href="https://www.tiktok.com/@ndb_mks269" target="_blank" class="link-item">TikTok</a>
+        <a href="https://instagram.com/nde_damu" target="_blank" class="link-item">Instagram</a>
+        <a href="https://facebook.com/profile.php?id=61553858924334" target="_blank" class="link-item">Facebook</a>
+        <a href="https://tiktok.com/@ndb_mks269" target="_blank" class="link-item">TikTok</a>
+      </div>
+
+      <!-- Dossier NDB -->
+      <div class="dossier" onclick="toggleLinks('ndbLinks')">
+        <h2>Dossier NDB</h2>
+        <p>Clique pour voir ses liens</p>
+      </div>
+      <div id="ndbLinks" class="links hidden">
+        <a href="https://tiktok.com/@ndb_mks269" target="_blank" class="link-item">TikTok</a>
+        <a href="https://soundcloud.com/ndb" target="_blank" class="link-item">SoundCloud</a>
+        <a href="https://youtube.com/@ndb" target="_blank" class="link-item">YouTube</a>
       </div>
     </div>
   </main>
@@ -74,5 +85,6 @@
   </script>
 </body>
 </html>
+
 
 
