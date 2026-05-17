@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -50,4 +49,32 @@
       <div class="dossier" onclick="toggleLinks('ndeLinks')">
         <h2>Dossier Ndé Damu</h2>
         <p>Clique pour voir ses liens</p>
+      </div>
+      <div id="ndeLinks" class="links hidden">
+        <a href="https://www.instagram.com/nde_damu" target="_blank" class="link-item">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61553858924334" target="_blank" class="link-item">Facebook</a>
+        <a href="https://www.tiktok.com/@ndb_mks269" target="_blank" class="link-item">TikTok</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Site créé par <strong>Nayad Ben Moustoifa</strong> &copy; 2026</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    function toggleFolders() {
+      const folders = document.getElementById("foldersContainer");
+      folders.classList.toggle("hidden");
+    }
+
+    function toggleLinks(id) {
+      const block = document.getElementById(id);
+      block.classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>
+
 
