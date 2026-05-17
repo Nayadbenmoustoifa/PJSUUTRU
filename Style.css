@@ -9,7 +9,12 @@
 }
 
 /* RESET */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
 
 /* BODY */
 body {
@@ -21,34 +26,107 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
+    position: relative;
 }
 
-/* CARD */
+/* BACKGROUND ANIMATION */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 0, 0, 0.15), transparent 60%);
+    animation: bgPulse 8s infinite alternate;
+}
+
+@keyframes bgPulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.2); opacity: 1; }
+}
+
+/* MAIN CARD */
 .card {
     width: 90%;
     max-width: 380px;
     background: var(--card-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border: 1px solid var(--card-border);
     border-radius: 20px;
     padding: 25px 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
     text-align: center;
+    margin: 15px;
+    animation: slideUp 0.8s ease;
 }
 
-/* DOSSIERS */
-.dossier {
-    width: 100%;
-    padding: 15px;
-    margin: 10px auto;
-    border: 2px solid #333;
-    border-radius: 10px;
-    background-color: rgba(255,255,255,0.05);
-    text-align: center;
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* PROFILE SECTION */
+.profile-section {
+    margin-bottom: 18px;
+}
+
+/* IMAGE PROFIL */
+.image-wrapper {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 10px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-.dossier:hover {
-    background-color: rgba(255,255,255,0.1);
+.image-wrapper:hover {
+    transform: scale(1.1);
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* PULSE */
+.pulse-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* LOGO DANS H1 */
+h1 img.logo {
+    width: 110px; /* taille moyenne adaptée */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* TEXTE TITRE */
+h1 {
+    margin-bottom: 5px;
+}
+
+/* TEXTE DESCRIPTION */
+p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 /* LINKS */
@@ -56,25 +134,124 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 10px 0;
+    max-height: 1000px;
+    transition: 0.4s;
 }
 
 .links.hidden {
-    display: none;
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
 }
 
+/* LINK ITEM */
 .link-item {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
     padding: 10px;
-    border-radius: 8px;
-    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
     text-decoration: none;
     color: white;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.link-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: translateX(-100%);
+    transition: 0.5s;
+}
+
+.link-item:hover::before {
+    transform: translateX(100%);
 }
 
 .link-item:hover {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
+/* ICON */
+.icon-box {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+    flex-shrink: 0;
+}
+
+.icon-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* TEXTE LIEN */
+.link-item span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 10px;
+    font-size: 11px;
+    opacity: 0.6;
+    text-align: center;
+}
+
+
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    background: #0f0f0f;
+}
+
+/* Image animée principale */
+.background-animation::before,
+.background-animation::after {
+    content: '';
+    position: absolute;
+    width: 300px;       /* taille de l'image */
+    height: 300px;
+    background-image: url('Suutruu.jpeg'); /* <-- mets ici ton image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;       /* transparence pour l'effet d'arrière-plan */
+    animation: moveImage 8s infinite alternate ease-in-out;
+}
+
+/* Positionnement de la deuxième image */
+.background-animation::after {
+    right: 10%;
+    top: 20%;
+    opacity: 0.25;
+    animation-delay: 4s;  /* décalage pour mouvement différé */
+}
+
+/* Animation de pulsation / mouvement */
+@keyframes moveImage {
+    0% { transform: scale(0.8) translate(0, 0); opacity: 0.2; }
+    50% { transform: scale(1.2) translate(20px, -10px); opacity: 0.35; }
+    100% { transform: scale(0.8) translate(0, 0); opacity: 0.2; }
+}
 
