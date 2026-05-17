@@ -1,5 +1,4 @@
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +9,7 @@
     <title>Suutruu | Music Links</title>
     
     <!-- Google Fonts -->
-  <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
@@ -23,7 +22,7 @@
 
     <main class="card">
         <div class="profile-section">
-            <div class="image-wrapper" id="toggleFolder">
+            <div class="image-wrapper">
                 <img src="pus.png" alt="Mes Plateformes" class="profile-pic">
                 <div class="pulse-ring"></div>
             </div>
@@ -31,64 +30,41 @@
             <p>Artiste / Musicien</p>
         </div>
 
-        <!-- Conteneur des liens -->
-        <div class="links" id="linksContainer">
-            <a href="https://audiomack.com/suutruu66" target="_blank" class="link-item">
-                <div class="icon-box"><img src="audiomack.jfif" alt="Audiomack"></div>
-                <span>Audiomack</span>
-            </a>
-
-            <a href="https://www.youtube.com/channel/UCjJFGzAu8vWFh2zOTwJZEIw" target="_blank" class="link-item">
-                <div class="icon-box"><img src="yiusuu.webp" alt="YouTube"></div>
-                <span>YouTube</span>
-            </a>
-
-            <a href="https://www.instagram.com/suuu_truuu?igsh=MW02ZXlland3aXljMg%3D%3D&utm_source=qr" target="_blank" class="link-item">
-                <div class="icon-box"><img src="instasuu.jfif" alt="Instagram"></div>
-                <span>SUUTRUU</span>
-            </a>
-          <a href="https://www.tiktok.com/@suutruu?_r=1&_t=ZS-953NuUmmjTQ" target="_blank" class="link-item">
-                <div class="icon-box"><img src="Ttk.jpg" alt="Instagram"></div>
-                <span>SUUTRUU</span>
-
-            <a href="https://www.instagram.com/nde_damu?igsh=YXlucW5jejQzc3g0" target="_blank" class="link-item">
-                <div class="icon-box"><img src="instasuu.jfif" alt="Instagram"></div>
-                <span>Ndé Damu</span>
-            </a>
-
-            <a href="https://www.facebook.com/profile.php?id=61553858924334&mibextid=wwXIfr&mibextid=wwXIfr" target="_blank" class="link-item">
-                <div class="icon-box"><img src="facesuu.webp" alt="Facebook"></div>
-                <span>Ndé damu</span>
-            </a>
-             <a href="https://www.tiktok.com/@ndb_mks269?is_from_webapp=1&sender_device=pc" target="_blank" class="link-item">
-                <div class="icon-box"><img src="BUKU-EP.png" alt="TIKTOK"></div>
-                <span>NDB-BUKU-EP</span>
-            </a>
+        <!-- Dossier SUUTRUU -->
+        <div class="dossier" onclick="toggleLinks('suutruuLinks')">
+            <h2>Dossier SUUTRUU</h2>
+            <p>Clique pour voir ses liens</p>
         </div>
-      <div class="bloc bloc1">
-        <h2>Dossier 1</h2>
-        <p>Contenu du premier dossier...</p>
-      </div>
+        <div id="suutruuLinks" class="links hidden">
+            <a href="https://audiomack.com/suutruu66" target="_blank" class="link-item">Audiomack</a>
+            <a href="https://www.youtube.com/channel/UCjJFGzAu8vWFh2zOTwJZEIw" target="_blank" class="link-item">YouTube</a>
+            <a href="https://www.instagram.com/suuu_truuu" target="_blank" class="link-item">Instagram</a>
+            <a href="https://www.tiktok.com/@suutruu" target="_blank" class="link-item">TikTok</a>
+        </div>
 
-  <div class="bloc bloc2">
-     <h2>Dossier 2</h2>
-     <p>Contenu du deuxième dossier...</p>
-  </div>
+        <!-- Dossier Ndé Damu -->
+        <div class="dossier" onclick="toggleLinks('ndeLinks')">
+            <h2>Dossier Ndé Damu</h2>
+            <p>Clique pour voir ses liens</p>
+        </div>
+        <div id="ndeLinks" class="links hidden">
+            <a href="https://www.instagram.com/nde_damu" target="_blank" class="link-item">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61553858924334" target="_blank" class="link-item">Facebook</a>
+            <a href="https://www.tiktok.com/@ndb_mks269" target="_blank" class="link-item">TikTok</a>
+        </div>
     </main>
 
     <footer>
         <p>Site créé par <strong>Nayad Ben Moustoifa</strong> &copy; 2026</p>
     </footer>
 
-    <!-- Script pour le bouton -->
+    <!-- Script -->
     <script>
-        const toggleBtn = document.getElementById("toggleFolder");
-        const linksContainer = document.getElementById("linksContainer");
-
-        toggleBtn.addEventListener("click", () => {
-            linksContainer.classList.toggle("hidden");
-            toggleBtn.classList.toggle("active");
-        });
+        function toggleLinks(id) {
+            const block = document.getElementById(id);
+            block.classList.toggle("hidden");
+        }
     </script>
 </body>
 </html>
+
